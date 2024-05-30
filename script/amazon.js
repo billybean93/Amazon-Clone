@@ -25,7 +25,7 @@ productsHTML += `
 </div>
 
 <div class="product-price">
-  $10.90
+  $${product.priceCents}
 </div>
 
 <div class="product-quantity-container">
