@@ -20,7 +20,7 @@
         // console.log(matchingItem)
 
         checkoutHTML += `
-        <div class="cart-item-container">
+        <div class="cart-item-container js-cart-item-container-${matchingItem.id}">
             <div class="delivery-date">
                 Delivery date: Tuesday, June 21
             </div>
@@ -106,6 +106,12 @@
           {
             let cartItemId = link.dataset.cartitemId
             removeFromCart(cartItemId);
+
+            const container = document.querySelector(`.js-cart-item-container-${cartItemId}`)
+            // container.remove();
+            console.log(container)
+            container.remove();
           }
+          
         )
     })
